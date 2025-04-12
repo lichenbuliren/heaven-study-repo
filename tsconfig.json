@@ -1,0 +1,3 @@
+{
+  "exclude": ["@workspace/typescript-config/base.json"]
+}

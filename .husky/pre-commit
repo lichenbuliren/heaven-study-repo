@@ -1,0 +1,10 @@
+# 检查是否为首个提交
+if git rev-parse --verify HEAD^ >/dev/null 2>&1; then
+    turbo run lint:staged --concurrency=4 --filter=...[HEAD^]
+else
+    # 首次提交时仅处理所有暂存文件
+    files=$(git diff --cached --name-only)
+    if [ -n "$files" ]; then
+        turbo run lint:staged --concurrency=4 --filter=...[HEAD] -- $files
+    fi
+fi

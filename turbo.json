@@ -1,0 +1,11 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "tasks": {
+    "lint:staged": {
+      "dependsOn": ["^lint:staged"],
+      "cache": false,
+      "inputs": ["*.{js,ts,vue,tsx}", "!**/node_modules/**"],
+      "outputs": []
+    }
+  }
+}
