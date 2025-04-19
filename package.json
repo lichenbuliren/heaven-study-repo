@@ -7,10 +7,15 @@
     "new": "node infra/scripts/create-project.js"
   },
   "workspaces": [
-    "apps/*",
     "packages/*"
   ],
+  "dependencies": {
+    "@heaven/typescript-config": "workspace:*"
+  },
   "devDependencies": {
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
     "turbo": "^1.0.0",
     "typescript": "^5.0.0"
   }

@@ -1,0 +1,25 @@
+{
+  "name": "@heaven/typescript-config",
+  "version": "1.0.0",
+  "private": true,
+  "main": "tsconfig.base.json",
+  "types": "tsconfig.base.json",
+  "exports": {
+    ".": "./tsconfig.base.json",
+    "./react": "./tsconfig.react.json",
+    "./nodejs": "./tsconfig.nodejs.json",
+    "./global": "./global.d.ts"
+  },
+  "files": [
+    "tsconfig.base.json",
+    "tsconfig.react.json",
+    "tsconfig.nodejs.json",
+    "global.d.ts"
+  ],
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "engines": {
+    "pnpm": ">=7.0.0"
+  }
+}
