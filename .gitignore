@@ -1,36 +1,44 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# 编译产物和构建文件
+/dist/
+/build/
+/out/
+/.next/
+/.vercel/
+/.expo/
+/.firebase/
+/.vite/
 
-# Dependencies
-node_modules
-.pnp
-.pnp.js
-
-# Local env files
+# 环境变量和敏感文件
 .env
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.development
+.env.test
+.env.production
+*.env.txt
+*.secret
 
-# Testing
-coverage
+# 本地开发配置
+# .npmrc
+# .yarnrc
+# .editorconfig
+# .idea/
+# .vscode/
+.vs/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# Turbo
-.turbo
-
-# Vercel
-.vercel
-
-# Build Outputs
-.next/
-out/
-build
-dist
-
-
-# Debug
-npm-debug.log*
-
-# Misc
+# 操作系统生成文件
 .DS_Store
-*.pem
+Thumbs.db
+desktop.ini
+
+# 日志和临时文件
+*.log
+*.tmp
+*.bak
+*.patch
+*.tmp.*
+node_modules/

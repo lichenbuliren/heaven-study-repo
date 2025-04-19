@@ -1,0 +1,17 @@
+{
+  "name": "monorepo-root",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build --filter=...",
+    "test": "turbo run test",
+    "new": "node infra/scripts/create-project.js"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "turbo": "^1.0.0",
+    "typescript": "^5.0.0"
+  }
+}
