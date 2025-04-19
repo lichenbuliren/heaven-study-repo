@@ -4,6 +4,5 @@
     "lib": ["ESNext"],
     "types": ["node"],
     "moduleResolution": "node"
-  },
-  "include": ["​**​/*.ts", "​**​/*.tsx"]
+  }
 }

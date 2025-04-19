@@ -1,12 +1,12 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "@heaven/typescript-config/tsconfig.base.json",
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./"],
-      "@rn/*": ["../apps/rn/src"],
-      "@web/*": ["../apps/web/src"],
-      "@nodejs/*": ["../apps/nodejs/src"]
+      "@/*": ["./*"],
+      "@rn/*": ["../apps/rn/src/*"],
+      "@web/*": ["../apps/web/src/*"],
+      "@nodejs/*": ["../apps/nodejs/src/*"]
     }
   }
 }

@@ -9,6 +9,5 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": "."
   },
-  "include": ["​**​/*.ts", "​**​/*.tsx"],
   "exclude": ["node_modules", "dist"]
 }
