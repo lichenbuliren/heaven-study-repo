@@ -1,15 +1,20 @@
 {
   "name": "@heaven/typescript-config",
-  "private": true,
   "version": "1.0.0",
-  "main": "tsconfig.base.json",
-  "types": "tsconfig.base.json",
   "files": [
-    "./tsconfig.base.json",
-    "./tsconfig.react.json",
-    "./tsconfig.nodejs.json",
-    "./global.d.ts"
+    "tsconfig.*.json"
   ],
+  "exports": {
+    "./base": "./tsconfig.base.json",
+    "./lib": "./tsconfig.lib.json",
+    "./react": "./tsconfig.react.json",
+    "./react-lib": "./tsconfig.react-lib.json",
+    "./nodejs": "./tsconfig.nodejs.json",
+    "./tsconfig.*.json": "./tsconfig.*.json"
+  },
+  "scripts": {
+    "build": "echo 'No build needed for config package'"
+  },
   "peerDependencies": {
     "typescript": "^5.0.0"
   }

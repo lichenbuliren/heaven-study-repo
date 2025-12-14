@@ -1,19 +1,40 @@
 {
   "name": "@heaven/eslint-config",
   "version": "1.0.0",
-  "main": "index.js",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "files": [
-    "configs/",
-    "rules/",
-    "index.js"
+    "dist"
   ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint-plugin-react": "^7.0.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-n": "^17.0.0"
+  },
   "peerDependencies": {
-    "eslint": ">=9.0.0",
-    "@typescript-eslint/eslint-plugin": ">=8.0.0",
-    "eslint-plugin-react": ">=7.0.0",
-    "eslint-plugin-node": ">=11.0.0"
+    "eslint": ">=9.0.0"
   },
   "devDependencies": {
-    "eslint": "^9.0.0"
+    "eslint": "^9.0.0",
+    "@types/eslint": "^9.0.0",
+    "@heaven/typescript-config": "workspace:*",
+    "@heaven/infra-build": "workspace:*",
+    "typescript": "^5.0.0",
+    "tsup": "^8.0.0"
   }
 }

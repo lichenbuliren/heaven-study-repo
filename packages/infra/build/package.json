@@ -1,0 +1,39 @@
+{
+  "name": "@heaven/infra-build",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./node-lib": {
+      "types": "./dist/configs/node-lib.d.ts",
+      "import": "./dist/configs/node-lib.js"
+    },
+    "./react-lib": {
+      "types": "./dist/configs/react-lib.d.ts",
+      "import": "./dist/configs/react-lib.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "dependencies": {
+    "tsup": "^8.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@heaven/typescript-config": "workspace:*",
+    "typescript": "^5.0.0"
+  }
+}
