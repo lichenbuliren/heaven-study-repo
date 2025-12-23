@@ -1,0 +1,32 @@
+{
+  "name": "github-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for querying GitHub information",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "github-mcp-server": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "node dist/index.js",
+    "lint": "eslint src --ext .ts"
+  },
+  "keywords": [
+    "mcp",
+    "github",
+    "model-context-protocol"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "@octokit/rest": "^21.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "typescript": "~5.7.2",
+    "@heaven/typescript-config": "workspace:*",
+    "@heaven/eslint-config": "workspace:*",
+    "tsup": "^8.3.5"
+  }
+}
